@@ -1,0 +1,60 @@
+body {background-image: url("tlo.jpg");}
+table.tabela { text-align: center;  border="3"; border-style: solid; width: 30%; background-color: #80ced6; border: solid 2px white; position: absolute; left: 1330px; top: 185px}
+			td { padding: 0px 0 0 0px; valign: top; border: solid 2px white;}
+table.tabela1 { text-align: center;  border="3"; border-style: solid; width: 30%; background-color: #80ced6; border: solid 2px white; position:absolute; left: 1330px}
+			td { padding: 0px 0 0 0px; valign: top; border: solid 2px white;}
+table.tabela2 { text-align: center;  border="3"; background-color: #80ced6; border: solid 2px white; width: 5%; position:absolute; left:1212px; top: 185px; height: 52%}
+table.tabela3 { text-align: center;  border="3"; background-color: #80ced6; border: solid 2px white;width: 30%; position: absolute; left: 1330px; top: 677px}
+			td {border: solid 2px white;}
+input.box1 {width: 300px; height: 100px; background-color: #80ced6;font-family: Franklin Gothic, Arial; border: solid 2px white; position: absolute; top: 700px;}
+input.box2 {width: 300px; background-color: #80ced6; font-family: Franklin Gothic, Arial; border: solid 2px white; position: absolute; top: 850px;}
+p.kom1 {background-color: #80ced6; width: 90px; border: solid 2px white; position:absolute; top:650px;}
+p.kom2 {background-color: #80ced6; width: 90px; border: solid 2px white; position:absolute; top:800px;}
+.button_add {
+    background-color: #4CAF50;
+    border: 2px solid #e7e7e7;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+
+.button_sub {
+    background-color: #f44336;
+    border: 2px solid #e7e7e7;
+    color: white;
+   padding: 2px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+#naglowek { text-align: center;  border="3"; border-style: solid; width: 60%; background-color: #80ced6; float:right; border: solid 2px white; color:white}
+
+#mapa {width:500px; height: 500px; position: absolute; top: 0px; left:0px; z-index:-1;}
+
+#inventory{width: 500px; height: 150px; position: absolute; left:0px; top: 500px;}
+#inv_tlo {position:absolute; left: 0px; z-index:-1;}
+
+#pig {width: 86px; height: 76px; position:absolute; left:10px; top:30px;}
+#pig:hover {background-color:rgba(96,69,30,0.2); border-radius: 25px;}
+
+#bsmith {width: 86px; height: 76px; position:absolute;left: 110px;top:30px;}
+#bsmith:hover {background-color:rgba(96,69,30,0.2); border-radius: 25px;}
+
+#smltry {width: 86px; height: 76px; position:absolute;left: 210px;top:30px;}
+#smltry:hover {background-color:rgba(96,69,30,0.2); border-radius: 25px;}
+
+#arm {width: 86px; height: 76px;position:absolute;left: 310px;top:30px;}
+#arm:hover {background-color:rgba(96,69,30,0.2); border-radius: 25px;}
+
+#market {width: 86px; height: 76px;position:absolute;left: 410px;top:30px;}
+#market:hover {background-color:rgba(96,69,30,0.2); border-radius: 25px;}
+
+#gracz {width:50px; height:50px; z-index:2; position: absolute; top: 0px; left:0px;}

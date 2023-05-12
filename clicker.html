@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html charset = "UTF-8">
+<head>
+<meta charset = "UTF-8">
+<title>Prototyp</title>
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body id = "clicker">
+<div id = "tabele">
+<table class = "tabela1" border = "3">
+<tr><th>Building</th><th>Own</th><th>Buy/Sell</th><th>Gained resource</th><th>Own</th><th></th><th>Build cost</th></tr>
+<tr><td><img src = "./ikony_budynkow/pigfarm.png" height ="138" width = "136"></td><td><p id = "id_rzeznia"></p></td><td><button type = "button" onclick = "rzeznia.add_rzeznia()" class = "button_add">+</button> <br> <button type = "button" onclick = "rzeznia.sell_rzeznia()" class = "button_sub">-</button></td><td><img src = "./ikony/meat.png"></td><td><p id = "id_meat">0/100</p></td><td><button type = "button" onclick = "mieso.add_meat()" class = "button_add">+</button> <br> <button type = "button" onclick = "mieso.sell_meat()" class = "button_sub">-</button></td><td><p id = "cena_rzezni"></p></td></tr>
+</table>
+<table class = "tabela" border = "3">
+<tr><th>Building</th><th>Own</th><th>Buy/Sell</th><th>Gained resource</th><th>Own</th><th></th><th>Build cost</th><th>Gold</th></tr>
+<tr><td><img src = "./ikony_budynkow/blacksmith.png" height ="138" width = "136"></td><td><p id = "id_kowal"></p></td><td><button type = "button" onclick = "kowal.add_kowal()" class = "button_add">+</button> <br> <button type = "button" onclick = "kowal.sell_kowal()" class = "button_sub">-</button></td><td><img src = "./ikony/iron.png"></td><td><p id = "id_iron">0/100</p></td><td><button type = "button" onclick = "zelazo.add_iron()" class = "button_add">+</button> <br> <button type = "button" onclick = "zelazo.sell_iron()" class = "button_sub">-</button></td><td><p id = "cena_kowala"></p></td><td><img src = "./ikony/gold.png"></td></tr>
+<tr><td><img src = "./ikony_budynkow/smeltery.png" height ="138" width = "136"></td><td><p id = "id_formiernia"></p></td><td><button type = "button" onclick = "formiernia.add_formiernia()" class = "button_add">+</button> <br> <button type = "button" onclick = "formiernia.sell_formiernia()" class = "button_sub">-</button></td><td><img src = "./ikony/steel.png"></td><td><p id = "id_steel">0/100</p></td><td><button type = "button" onclick = "stal.add_steel()" class = "button_add">+</button> <br> <button type = "button" onclick = "stal.sell_steel()" class = "button_sub">-</button></td><td><p id = "cena_formierni"></p></td><td rowspan = "3"><p id = "id_gold"></p></td></tr>
+<tr><td><img src = "./ikony_budynkow/armourer.png" height ="138" width = "136"></td><td><p id = "id_zbrojownia"></p></td><td><button type = "button" onclick = "zbrojownia.add_zbrojownia()" class = "button_add">+</button> <br> <button type = "button" onclick = "zbrojownia.sell_zbrojownia()" class = "button_sub">-</button></td><td><img src = "./ikony/arms.png"></td><td><p id = "id_arms">0/100</p></td><td><button type = "button" onclick = "bron.add_arms()" class = "button_add">+</button> <br> <button type = "button" onclick = "bron.sell_arms()" class = "button_sub">-</button></td><td><p id = "cena_zbrojowni"></p></td></tr>
+</table>
+
+<table class = "tabela2" border = "3">
+<tr><th>Surowiec</th><th>Cena</th></tr>
+<tr><td><img src = "./ikony/meat.png"></td><td>1</td></tr>
+<tr><td><img src = "./ikony/iron.png"></td><td>1</td></tr>
+<tr><td><img src = "./ikony/steel.png"></td><td>3</td></tr>
+<tr><td><img src = "./ikony/arms.png"></td><td>10</td></tr>
+</table>
+<table class = "tabela3" border = "3">
+<tr><th>Building</th><th>Own</th><th>Buy/Sell</th><th>Build cost</th></tr>
+<tr><td><img src = "./ikony_budynkow/marketplace.png" height ="138" width = "136"></td><td><p id = "id_sklep"></p></td><td><button type = "button" onclick = "sklep.add_sklep()" class = "button_add">+</button> <br> <button type = "button" onclick = "sklep.sell_sklep()" class = "button_sub">-</button></td><td><p id = "cena_sklepu"></p></td></tr>
+</table>
+</div>
+<br>
+
+<div id = "mapa">
+<img src = "HexPreview.png" width = "500px" height = "500px">
+<div id = "gracz" style="top: 0; left: 0; position: absolute;">
+<img src = "farmer.png" width = "50px" height = "50px">
+</div>
+
+</div>
+<div id = "inventory">
+<img id = "inv_tlo" src = "inventory.png" width = "505px" height = "150px">
+<img id = "pig" src = "./ikony_budynkow/pigfarm.png">
+<img id = "bsmith" src = "./ikony_budynkow/blacksmith.png">
+<img id = "smltry" src = "./ikony_budynkow/smeltery.png">
+<img id = "arm" src = "./ikony_budynkow/armourer.png">
+<img id = "market" src = "./ikony_budynkow/marketplace.png">
+</div>
+<div>
+<form>
+<p class = "kom1">Komunikaty:</p><input class = "box1" type = "text" id = "helpbox" value = " " readonly><br>
+<p class = "kom2">Konsola: </p><input class = "box2" type = "text" id = "console" value = "" onchange = "kody()"><br>
+</form>
+</div>
+<br>
+<script type = "text/javascript" src = "budynki.js"></script>
+<script type = "text/javascript" src = "zasoby.js"></script>
+<script type = "text/javascript" src = "zloto.js"></script>
+<script type = "text/javascript" src = "konsola.js"></script>
+<script type = "text/javascript" src = "zdarzenia.js"></script>
+<script type = "text/javascript" src = "mapa.js"></script>
+</body>
+</html>
